@@ -1,0 +1,11 @@
+
+  <h1>PAGE POTIN</h1>
+  <h2>Voici la page du potin n°<%= @gossip.id %></h2>
+      <p>
+        <b>Son auteur :</b> <%= @gossip.user.first_name %><br/>
+        <b>Le contenu du potin :</b> "<%= @gossip.content %>"
+      </p>
+  <p>
+    <%= link_to "Consulter la page de l'auteur", user_show_path(@gossip.user) %>
+  </p>
+

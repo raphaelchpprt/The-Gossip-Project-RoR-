@@ -1,0 +1,17 @@
+
+  <h1>Bienvenue !</h1>
+  <h3>Voici la liste des gossips :</h3><br>
+
+  <% @gossips.each_with_index do |gossip, index| %>
+  <div class="card w-75">
+    <div class="card-body">
+      <h5 class="card-title"><b>Auteur :</b> <%= gossip.user.first_name %></h5>
+      <p class="card-text"><b>Titre :</b> <%= gossip.title %></p>
+      <%= link_to "Consulter la page du gossip", gossip_show_path(gossip.id), :class => "btn btn-primary" %>
+    </div>
+  </div>
+  <br>
+  <% end %>
+
+
+
