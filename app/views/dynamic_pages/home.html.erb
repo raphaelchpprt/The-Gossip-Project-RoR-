@@ -1,8 +1,17 @@
+<% if notice.present? %>
+  <div class="alert alert-success" role="alert">
+    Ton gossip a bien été créé !
+  </div>
+<% end %>
 
-  <h1>Bienvenue !</h1>
-  <h3>Voici la liste des gossips :</h3><br>
+<h1>Bienvenue !</h1>
+<br>
+<h3>Désires-tu créer un nouveau gossip ?</h3>
+<%= link_to "Créer un gossip", new_gossip_path, :class => "btn btn-primary" %>
+<br><br>
+<h3>Voici la liste des gossips déjà existants :</h3><br>
 
-  <% @gossips.each_with_index do |gossip, index| %>
+<% @gossips.each_with_index do |gossip, index| %>
   <div class="card w-75">
     <div class="card-body">
       <h5 class="card-title"><b>Auteur :</b> <%= gossip.user.first_name %></h5>
@@ -10,8 +19,6 @@
       <%= link_to "Consulter la page du gossip", gossip_show_path(gossip.id), :class => "btn btn-primary" %>
     </div>
   </div>
-  <br>
-  <% end %>
-
-
+<br>
+<% end %>
 

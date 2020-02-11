@@ -17,7 +17,7 @@ PrivateMessage.destroy_all
 
 a=1
 10.times do
-  city = City.create!(
+  City.create!(
     id: a,
     name: Faker::Address.city,
     zip_code: Faker::Address.zip_code
@@ -27,7 +27,7 @@ end
 
 b=1
 10.times do
-  user = User.create!(
+  User.create!(
     id: b,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -39,11 +39,21 @@ b=1
   b+=1
 end
 
+User.create(
+  id: b,
+  first_name: "Anonymous",
+  last_name: "Anonymous",
+  description: "anonymous",
+  email: "anonymous@anonymous.com",
+  age: "anonymous",
+  city_id: rand(City.first.id..City.last.id)
+)
+
 c=1
 20.times do
   gossip = Gossip.create!(
     id: c,
-    title: Faker::Lorem.sentence(word_count: 3),
+    title: "Fake Title " + c.to_s,
     content: Faker::Lorem.paragraph(sentence_count: 2),
     user_id: rand(User.first.id..User.last.id)
   )

@@ -1,9 +1,8 @@
+<h1>PAGE AUTEUR</h1>
+<h2>Voici la page de l'auteur <%= @user.first_name %> <%= @user.last_name %></h2>
 
-  <h1>PAGE AUTEUR</h1>
-  <h2>Voici la page de l'auteur <%= @user.first_name %> <%= @user.last_name %></h2>
-
-  <p>
-    <b>Age :</b> <%= @user.age %> ans<br/>
-    <b>Ville :</b> <%= @user.city.name %> <br/>
-    <b>Description :</b> "<%= @user.description %>"
-  </p>
+<p>
+  <b>Age :</b> <%= @user.age %> ans<br/>
+  <b>Ville :</b> <%= @user.city.name %> (<%= @user.city.zip_code %>)<br/>
+  <b>Description :</b> "<%= @user.description %>"
+</p>
