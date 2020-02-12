@@ -1,0 +1,24 @@
+<div id="one">
+  <div class="container">  
+    <h1>PAGE VILLE</h1>
+    <hr class="style1"><br>
+    <div class="card" id="two">
+      <h2>Voici la page de la ville <strong><%= @city.name %></strong></h2>
+      <p><br>
+        <b>Code postal :</b> <%= @city.zip_code %>
+      </p>
+    </div><br>
+  <h3>Voici la liste des gossips écrits par les utilisateurs associés à cette ville :</h3><br>
+
+  <% @gossips.each do |gossip| %>
+    <div class="card w-75">
+      <div class="card-body">
+        <h5 class="card-title"><b>Auteur :</b> <%= gossip.user.first_name %></h5>
+        <p class="card-text"><b>Titre :</b> <%= gossip.title %></p>
+        <%= link_to "Consulter la page du gossip", gossip_path(gossip.id), :class => "btn btn-primary" %>
+      </div>
+    </div>
+  <br>
+  <% end %>
+  </div>
+</div>

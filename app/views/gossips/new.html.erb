@@ -1,26 +1,33 @@
-<% if @gossip.errors.any? %>
-  <div class="alert alert-danger" role="alert">
-    <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
-    <ul>
-      <% @gossip.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+<div id="one">
+  <div class="container">      
+    <h1> CRÉATION D'UN NOUVEAU GOSSIP</h1>
+    <hr class="style1"><br />
+
+    <% if @gossip.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <br>
+        <p>❌&nbsp;&nbsp;Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+        <ul>
+          <% @gossip.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <br>
+      </div>
+    <% end %>
+    <%= form_tag gossips_path, method: "POST" do %>
+      <div class="form-group mb-2">
+        <%= label_tag 'Titre : ' %>
+        <%= text_field_tag :title, params[:title], class: 'form-control', placeholder: 'title' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= label_tag 'Contenu du gossip : ' %>
+        <%= text_field_tag :content, params[:content], class: 'form-control', placeholder: 'content' %>
+      </div>
+      <br>
+        <%= submit_tag "Créer", class: 'btn btn-primary' %>
+
+    <% end %>
   </div>
-<% end %>
-<br />
-<h1> CRÉATION D'UN NOUVEAU GOSSIP</h1>
-<hr class="style1"><br />
-<%= form_tag gossips_path, method: "POST" do %>
-
-  <%= label_tag 'Titre : ' %>
-  <%= text_field_tag 'title', params[:title] %>
-  <br /> <br />
-
-  <%= label_tag 'Contenu du gossip : ' %>
-  <%= text_field_tag 'content', params[:content] %>
-  <br /> <br />
-
-  <%= submit_tag "Créer" %>
-
-<% end %>
+</div>

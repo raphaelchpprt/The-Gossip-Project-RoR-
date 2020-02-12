@@ -13,14 +13,22 @@
  *= require_tree .
  *= require_self
  */
+#zero {
+  margin-top: 30px;
+}
+
  #one {
-   margin-top: 20px;
-   margin-left: 40px;
+   margin-top: 90px;
+   margin-left: -60px;
    color: #484A57
  }
 
  h1 {
    color: #2a303b
+ }
+
+ .display-4 {
+   margin-top: 40px;
  }
 
  b {
@@ -29,4 +37,17 @@
 
  .card-title{
   color: #2a303b
+ }
+
+ .card#two{
+   padding: 25px;
+   padding: 25px;
+ }
+
+ strong{
+   color: #13151a
+ }
+
+ .jumbotron {
+  height: 390px;
  }

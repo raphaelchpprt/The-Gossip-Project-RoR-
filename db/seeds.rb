@@ -14,6 +14,7 @@ Gossip.destroy_all
 Tag.destroy_all
 GossipXTag.destroy_all
 PrivateMessage.destroy_all
+Comment.destroy_all
 
 a=1
 10.times do
@@ -43,7 +44,7 @@ User.create(
   id: b,
   first_name: "Anonymous",
   last_name: "Anonymous",
-  description: "anonymous",
+  description: "Anonymous anonymous anonymous anonymous anonymous anonymous",
   email: "anonymous@anonymous.com",
   age: "anonymous",
   city_id: rand(City.first.id..City.last.id)
@@ -51,18 +52,18 @@ User.create(
 
 c=1
 20.times do
-  gossip = Gossip.create!(
+  Gossip.create!(
     id: c,
     title: "Fake Title " + c.to_s,
     content: Faker::Lorem.paragraph(sentence_count: 2),
-    user_id: rand(User.first.id..User.last.id)
+    user_id: rand(User.first.id..User.last.id),
   )
   c+=1
 end
 
 d=1
 10.times do
-  tag = Tag.create!(
+  Tag.create!(
     id: d,
     title: "#" + Faker::Lorem.word
   )
@@ -89,3 +90,11 @@ e=1
     )
   e+=1
 end 
+
+20.times do
+  Comment.create(
+    content: Faker::Quote.famous_last_words,
+    gossip_id: rand(Gossip.first.id..Gossip.last.id),
+    user_id: rand(User.first.id..User.last.id)
+  )
+end

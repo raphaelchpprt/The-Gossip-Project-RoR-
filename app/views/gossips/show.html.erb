@@ -1,0 +1,24 @@
+<div id="one">
+  <div class="container">  
+    <h1>PAGE POTIN</h1>
+    <hr class="style1"><br>
+    <div class ="card" id="two">
+      <h2>Voici la page du potin n°<%= @gossip.id %>, intitulé : <strong><%= @gossip.title %></strong></h2>
+          <p><br>
+            <b>Le contenu du potin :</b> "<%= @gossip.content %>"<br/><br/>
+            <b>Son auteur :</b> <%= @gossip.user.first_name %> <%= @gossip.user.last_name %><br/>
+            <b>La ville de son auteur :</b> <%= @gossip.user.city.name %> (<%= @gossip.user.city.zip_code %>)<br/>
+          </p>
+        <br>
+      <p>
+        <%= link_to "Consulter la page de l'auteur", user_path(@gossip.user) %>
+      </p>
+      <p>
+      <br>
+      <%= link_to "Modifier le gossip", edit_gossip_path(@gossip.id), :class => "btn btn-primary" %>
+      &nbsp;&nbsp;&nbsp;
+      <%= link_to "Supprimer le gossip", gossip_path(@gossip.id), :method => "delete", data: {confirm: "Es-tu sûr ?"}, :class => "btn btn-danger" %>
+      <p>
+    </div>
+  </div>
+</div>

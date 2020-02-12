@@ -3,7 +3,7 @@ class DynamicPagesController < ApplicationController
   end
 
   def home
-    @gossips = Gossip.all
+    @gossips = Gossip.all.order(:id)
   end
 
   def gossip_show
