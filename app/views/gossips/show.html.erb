@@ -13,12 +13,35 @@
       <p>
         <%= link_to "Consulter la page de l'auteur", user_path(@gossip.user) %>
       </p>
+      
       <p>
       <br>
       <%= link_to "Modifier le gossip", edit_gossip_path(@gossip.id), :class => "btn btn-primary" %>
       &nbsp;&nbsp;&nbsp;
       <%= link_to "Supprimer le gossip", gossip_path(@gossip.id), :method => "delete", data: {confirm: "Es-tu sûr ?"}, :class => "btn btn-danger" %>
+      
       <p>
+      <% @comments.each do |comment| %>
+        <div class="card w-75">
+          <div class="card-body">
+            <h5 class="card-title"><b></b> <%= comment.user.first_name %> <%= comment.user.last_name %></h5>
+            <p class="card-text"><b></b> <%= comment.content %></p>
+          </div>
+        </div>
+      <br>
+      <% end %>
+      <p></p>
+      <p>
+        <%= form_tag gossip_comments_path(@gossip), method: "post" do %>
+        <div class="form-group">
+          <%= label_tag 'Commentaire : ' %>
+          <%= text_area_tag :content, params[:content], class: 'form-control', placeholder: 'comment...' %>
+          <%= hidden_field_tag :gossip, @gossip.id %>
+        </div>
+          <%= submit_tag "Commenter le gossip", class: 'btn btn-primary' %>
+        <% end %>
+      </p>
     </div>
   </div>
 </div>
+
