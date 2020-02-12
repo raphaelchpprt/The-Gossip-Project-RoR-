@@ -4,11 +4,11 @@
   </div>
 <% end %>
 
-<h1>Bienvenue !</h1>
+<h1>Bienvenue sur The Gossip Project !</h1>
 <br>
 <h3>Désires-tu créer un nouveau gossip ?</h3>
 <%= link_to "Créer un gossip", new_gossip_path, :class => "btn btn-primary" %>
-<br><br>
+<br><br><hr class="style1"><br>
 <h3>Voici la liste des gossips déjà existants :</h3><br>
 
 <% @gossips.each_with_index do |gossip, index| %>
