@@ -1,0 +1,32 @@
+<div id="one">
+  <div class="container">   
+
+    <h1>MODIFICATION D'UN COMMENTAIRE</h1>
+
+    <hr class="style1"><br />
+    <% if @comment.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <br>
+        <p>❌&nbsp;&nbsp;Nous n'avons pas réussi à modifier le potin pour la (ou les) raison(s) suivante(s) :</p>
+        <ul>
+          <% @gossip.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <br>
+      </div>
+    <% end %>
+
+    <h2>Modification du commentaire : <%= @comment.content %></h2><br>
+    <%= form_tag gossip_comment_path, method: "patch" do %>
+      <div class="form-group mb-2">
+        <%= label_tag 'Commentaire : ' %>
+        <%= text_area_tag :content, params[:content], class: 'form-control', placeholder: 'New comment...' %>
+      </div>
+      <br>
+        <%= submit_tag "Modifier", class: 'btn btn-primary' %>
+        <%= link_to "Supprimer le commentaire", gossip_comment_path(@gossip.id, @comment.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le commentaire ?"}, :class => "btn btn-danger" %>
+    <% end %>
+    <p><br></p>
+  </div>
+</div>

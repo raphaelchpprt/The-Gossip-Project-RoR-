@@ -3,7 +3,7 @@
     <h1>PAGE POTIN</h1>
     <hr class="style1"><br>
     <div class ="card" id="two">
-      <h2>Voici la page du potin n°<%= @gossip.id %>, intitulé : <strong><%= @gossip.title %></strong></h2>
+      <h2>Voici la page du gossip n°<%= @gossip.id %>, intitulé : <strong><%= @gossip.title %></strong></h2>
           <p><br>
             <b>Le contenu du potin :</b> "<%= @gossip.content %>"<br/><br/>
             <b>Son auteur :</b> <%= @gossip.user.first_name %> <%= @gossip.user.last_name %><br/>
@@ -18,14 +18,17 @@
       <br>
       <%= link_to "Modifier le gossip", edit_gossip_path(@gossip.id), :class => "btn btn-primary" %>
       &nbsp;&nbsp;&nbsp;
-      <%= link_to "Supprimer le gossip", gossip_path(@gossip.id), :method => "delete", data: {confirm: "Es-tu sûr ?"}, :class => "btn btn-danger" %>
-      
+      <%= link_to "Supprimer le gossip", gossip_path(@gossip.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le gossip ?"}, :class => "btn btn-danger" %>
+      <p></p>
+      <hr class="style1"><br>
+      <h4>Commentaires :</h4>
       <p>
       <% @comments.each do |comment| %>
         <div class="card w-75">
           <div class="card-body">
             <h5 class="card-title"><b></b> <%= comment.user.first_name %> <%= comment.user.last_name %></h5>
             <p class="card-text"><b></b> <%= comment.content %></p>
+            <%= link_to "Modifier le commentaire", edit_gossip_comment_path(@gossip, comment), :class => "btn btn-secondary btn-sm" %>
           </div>
         </div>
       <br>
@@ -34,8 +37,7 @@
       <p>
         <%= form_tag gossip_comments_path(@gossip), method: "post" do %>
         <div class="form-group">
-          <%= label_tag 'Commentaire : ' %>
-          <%= text_area_tag :content, params[:content], class: 'form-control', placeholder: 'comment...' %>
+          <%= text_area_tag :content, params[:content], class: 'form-control', placeholder: 'Comment here...' %>
           <%= hidden_field_tag :gossip, @gossip.id %>
         </div>
           <%= submit_tag "Commenter le gossip", class: 'btn btn-primary' %>

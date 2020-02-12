@@ -1,15 +1,17 @@
 <div id="one">
-  <div class="container">  
+  <div class="container">
+
     <h1>PAGE VILLE</h1>
     <hr class="style1"><br>
+
     <div class="card" id="two">
       <h2>Voici la page de la ville <strong><%= @city.name %></strong></h2>
       <p><br>
         <b>Code postal :</b> <%= @city.zip_code %>
       </p>
     </div><br>
-  <h3>Voici la liste des gossips écrits par les utilisateurs associés à cette ville :</h3><br>
 
+  <h3>Voici la liste des gossips écrits par les utilisateurs associés à cette ville :</h3><br>
   <% @gossips.each do |gossip| %>
     <div class="card w-75">
       <div class="card-body">
@@ -22,5 +24,6 @@
     </div>
   <br>
   <% end %>
+
   </div>
 </div>

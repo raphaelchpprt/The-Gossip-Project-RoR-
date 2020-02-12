@@ -44861,3 +44861,549 @@ Processing by DynamicPagesController#home as HTML
 Completed 200 OK in 109ms (Views: 90.2ms | ActiveRecord: 12.9ms)
 
 
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:48:19 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:27
+  Rendered gossips/show.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 144ms (Views: 113.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:50:51 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:27
+  Rendered gossips/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 96ms (Views: 89.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:51:42 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (1.9ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:27
+  Rendered gossips/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 76ms (Views: 64.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:52:26 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (1.0ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:25
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:28
+  Rendered gossips/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 69ms (Views: 54.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:52:36 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:28
+  Rendered gossips/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 62ms (Views: 49.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:52:47 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (2.2ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:28
+  Rendered gossips/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 63ms (Views: 45.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:53:10 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:28
+  Rendered gossips/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 60ms (Views: 47.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:53:38 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (1.2ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:54:00 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 60ms (Views: 50.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:56:27 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (1.2ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 63ms (Views: 54.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:56:37 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 80ms (Views: 69.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:57:18 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"comments", :gossip_id=>"2", :id=>nil}, missing required keys: [:id]):
+    28:           <div class="card-body">
+    29:             <h5 class="card-title"><b></b> <%= comment.user.first_name %> <%= comment.user.last_name %></h5>
+    30:             <p class="card-text"><b></b> <%= comment.content %></p>
+    31:             <%= link_to "Modifier le commentaire", edit_gossip_comment_path(@gossip, @comment), :class => "btn btn-secondary btn-sm" %>
+    32:           </div>
+    33:         </div>
+    34:       <br>
+  
+app/views/gossips/show.html.erb:31:in `block in _app_views_gossips_show_html_erb___3815807601227876309_70300264454020'
+app/views/gossips/show.html.erb:26:in `_app_views_gossips_show_html_erb___3815807601227876309_70300264454020'
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:57:47 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 67ms (Views: 57.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 19:57:54 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 19:58:21 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 57ms (Views: 46.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 19:58:23 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    4:     <h1>MODIFICATION D'UN COMMENTAIRE</h1>
+    5: 
+    6:     <hr class="style1"><br />
+    7:     <% if @gossip.errors.any? %>
+    8:       <div class="alert alert-danger" role="alert">
+    9:         <br>
+   10:         <p>❌&nbsp;&nbsp;Nous n'avons pas réussi à modifier le potin pour la (ou les) raison(s) suivante(s) :</p>
+  
+app/views/comments/edit.html.erb:7:in `_app_views_comments_edit_html_erb___3475631409393417382_70300249052500'
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 19:58:37 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    4:     <h1>MODIFICATION D'UN COMMENTAIRE</h1>
+    5: 
+    6:     <hr class="style1"><br />
+    7:     <% if @comment.errors.any? %>
+    8:       <div class="alert alert-danger" role="alert">
+    9:         <br>
+   10:         <p>❌&nbsp;&nbsp;Nous n'avons pas réussi à modifier le potin pour la (ou les) raison(s) suivante(s) :</p>
+  
+app/views/comments/edit.html.erb:7:in `_app_views_comments_edit_html_erb___3475631409393417382_70300200450840'
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 19:59:08 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 7.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17:       </div>
+    18:     <% end %>
+    19: 
+    20:     <h2>Modification du gossip n°<%= @gossip.id %></h2><br>
+    21:     <%= form_tag gossip_path, method: "patch" do %>
+    22:       <div class="form-group mb-2">
+    23:         <%= label_tag 'Titre : ' %>
+  
+app/views/comments/edit.html.erb:20:in `_app_views_comments_edit_html_erb___3475631409393417382_70300203558500'
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 20:01:14 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 55ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 20:01:45 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 20:02:34 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 53ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 20:02:53 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 20:06:39 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    25:       </div>
+    26:       <br>
+    27:         <%= submit_tag "Modifier", class: 'btn btn-primary' %>
+    28:         <%= link_to "Supprimer le commentaire", gossip_comment_path(@gossip.id, @comment.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le commentaire ?"}, :class => "btn btn-danger" %>
+    29:     <% end %>
+    30:     <p><br></p>
+    31:   </div>
+  
+app/views/comments/edit.html.erb:28:in `block in _app_views_comments_edit_html_erb___3475631409393417382_70300203977520'
+app/views/comments/edit.html.erb:21:in `_app_views_comments_edit_html_erb___3475631409393417382_70300203977520'
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 20:08:00 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    25:       </div>
+    26:       <br>
+    27:         <%= submit_tag "Modifier", class: 'btn btn-primary' %>
+    28:         <%= link_to "Supprimer le commentaire", gossip_comment_path(@gossip.id, @comment.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le commentaire ?"}, :class => "btn btn-danger" %>
+    29:     <% end %>
+    30:     <p><br></p>
+    31:   </div>
+  
+app/views/comments/edit.html.erb:28:in `block in _app_views_comments_edit_html_erb___3475631409393417382_70300264434960'
+app/views/comments/edit.html.erb:21:in `_app_views_comments_edit_html_erb___3475631409393417382_70300264434960'
+Started GET "/gossips/2/comments/21/edit" for 127.0.0.1 at 2020-02-12 20:08:40 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"gossip_id"=>"2", "id"=>"21"}
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    25:       </div>
+    26:       <br>
+    27:         <%= submit_tag "Modifier", class: 'btn btn-primary' %>
+    28:         <%= link_to "Supprimer le commentaire", gossip_comment_path(@gossip.id, @comment.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le commentaire ?"}, :class => "btn btn-danger" %>
+    29:     <% end %>
+    30:     <p><br></p>
+    31:   </div>
+  
+app/views/comments/edit.html.erb:28:in `block in _app_views_comments_edit_html_erb___3475631409393417382_70300243040840'
+app/views/comments/edit.html.erb:21:in `_app_views_comments_edit_html_erb___3475631409393417382_70300243040840'
+Started GET "/" for 127.0.0.1 at 2020-02-12 20:09:18 +0100
+Processing by DynamicPagesController#home as HTML
+  Rendering dynamic_pages/home.html.erb within layouts/application
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips" ORDER BY "gossips"."id" ASC[0m
+  ↳ app/views/dynamic_pages/home.html.erb:29
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 3]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 4]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 5]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 6]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 7]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 8]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 9]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 10]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 11]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 12]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 13]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 14]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 15]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 16]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 17]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 18]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 19]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 20]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dynamic_pages/home.html.erb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 21]]
+  ↳ app/views/dynamic_pages/home.html.erb:35
+  Rendered dynamic_pages/home.html.erb within layouts/application (121.5ms)
+Completed 200 OK in 192ms (Views: 161.2ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 20:09:32 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 108ms (Views: 88.7ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/gossips/2" for 127.0.0.1 at 2020-02-12 20:10:08 +0100
+Processing by GossipsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT  "gossips".* FROM "gossips" WHERE "gossips"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gossips_controller.rb:17
+  Rendering gossips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:9
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gossip_id" = $1[0m  [["gossip_id", 2]]
+  ↳ app/views/gossips/show.html.erb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/gossips/show.html.erb:29
+  Rendered gossips/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 59ms (Views: 45.2ms | ActiveRecord: 1.2ms)
+
+
