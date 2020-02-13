@@ -10,6 +10,13 @@
       </div>
     <% end %>
 
+    <% if notice == "Must be connected" %>
+      <div class="alert alert-primary" role="alert">
+        <br>
+        <p>ℹ️&nbsp;&nbsp;Veuillez vous connecter pour continuer.</p>
+      </div>
+    <% end %>
+
     <%= form_tag sessions_path, method: "POST" do %>
       <div class="form-group mb-2">
         <%= label_tag 'Adresse e-mail : ' %>

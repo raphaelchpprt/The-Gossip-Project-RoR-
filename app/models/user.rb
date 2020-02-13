@@ -4,8 +4,8 @@ class User < ApplicationRecord
   has_many :sent_messages, foreign_key: 'sender_id', class_name: "PrivateMessage"
   has_many :received_messages, foreign_key: 'recipient_id', class_name: "PrivateMessage"
 
-  #validates :first_name, :last_name, :description, :email, :age,
-  #  presence: true
+  validates :first_name, :last_name,
+    presence: true
   has_secure_password
   validates :email,
     presence: true

@@ -12,6 +12,11 @@
         ❌&nbsp;&nbsp;Ton commentaire a bien été supprimé !
       </div>
     <% end %>
+    <% if notice == "Must be creator" %>
+      <div class="alert alert-success" role="alert">
+        ❌&nbsp;&nbsp;Tu dois être le créateur du gossip pour pouvoir le modifier ou le supprimer.
+      </div>
+    <% end %>
     <div class ="card" id="two">
       <h2>Voici la page du gossip n°<%= @gossip.id %>, intitulé : <strong><%= @gossip.title %></strong></h2>
           <p><br>
@@ -26,10 +31,12 @@
       
       <p>
       <br>
+      <% if current_user.id == @gossip.user.id %>
       <%= link_to "Modifier le gossip", edit_gossip_path(@gossip.id), :class => "btn btn-primary" %>
       &nbsp;&nbsp;&nbsp;
       <%= link_to "Supprimer le gossip", gossip_path(@gossip.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le gossip ?"}, :class => "btn btn-danger" %>
       <p></p>
+      <% end %>
 
       <hr class="style1"><br>
 
@@ -59,4 +66,7 @@
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
 
