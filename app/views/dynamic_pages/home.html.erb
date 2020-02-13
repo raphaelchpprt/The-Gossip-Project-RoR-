@@ -51,7 +51,7 @@
   <% @gossips.each_with_index do |gossip, index| %>
     <div class="card w-75">
       <div class="card-body">
-        <small class="text-muted">Gossip n°<%= gossip.id %></small><p></p>
+        <small class="text-muted">Gossip n°<%= gossip.id %> - <%= gossip.likes.count %> &#x2764;&#xFE0F;</small><p></p>
         <h5 class="card-title"><b>Auteur :</b> <%= gossip.user.first_name %> <%= gossip.user.last_name %></h5>
         <p class="card-text"><b>Titre :</b> <%= gossip.title %></p>
         <% if gossip.comments.present? %>
