@@ -1,0 +1,28 @@
+<div id="one">
+  <div class="container">      
+    <h1>SE CONNECTER</h1>
+    <hr class="style1"><br />
+
+    <% if notice == "Not logged in!" %>
+      <div class="alert alert-danger" role="alert">
+        <br>
+        <p>❌&nbsp;&nbsp;L'adresse email ou le mot de passe saisis ne correspondent à aucun compte.</p>
+      </div>
+    <% end %>
+
+    <%= form_tag sessions_path, method: "POST" do %>
+      <div class="form-group mb-2">
+        <%= label_tag 'Adresse e-mail : ' %>
+        <%= text_field_tag :email, params[:email], class: 'form-control', placeholder: 'E-mail' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= label_tag 'Mot de passe : ' %>
+        <%= text_field_tag :password, params[:password], class: 'form-control', placeholder: 'Mot de passe' %>
+      </div>
+      <br>
+        <%= submit_tag "Se connecter", class: 'btn btn-primary' %>
+
+    <% end %>
+  </div>
+</div>

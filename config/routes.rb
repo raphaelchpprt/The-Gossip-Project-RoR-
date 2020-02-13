@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get '/welcome/:id', to: 'dynamic_pages#welcome'
   root 'dynamic_pages#home'
   resources :gossips
-  resources :users, only: [:show]
+  resources :users
   resources :cities, only: [:show]
   resources :gossips do
     resources :comments
   end
+  resources :sessions, only: [:new, :create, :destroy]
 end

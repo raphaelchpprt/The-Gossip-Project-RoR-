@@ -4,7 +4,7 @@ class GossipsController < ApplicationController
   end
 
   def create
-    @gossip = Gossip.new(id: Gossip.last.id + 1, title: params[:title], content: params[:content], user_id: 11) # avec xxx qui sont les données obtenues à partir du formulaire
+    @gossip = Gossip.new(id: Gossip.last.id + 1, title: params[:title], content: params[:content], user_id: current_user.id) # avec xxx qui sont les données obtenues à partir du formulaire
 
     if @gossip.save # essaie de sauvegarder en base @gossip
       redirect_to(root_path, notice: 'Gossip saved!')

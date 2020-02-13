@@ -9,7 +9,7 @@ The rails version used is volontarily 5.2.3.
 
 ## Install from your console
 
-`git clone https://github.com/estelle-rcr/THP-Gossip-rails-mvc.git`
+`git clone https://github.com/raphaelchpprt/The-Gossip-Project-RoR-.git`
 
 Install the bundle:
   `bundle install`

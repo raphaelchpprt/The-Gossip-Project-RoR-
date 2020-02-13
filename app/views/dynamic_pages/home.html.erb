@@ -8,21 +8,43 @@
 </div>
 
 <div class = "container">
+
   <% if notice == "Gossip saved!" %>
     <div class="alert alert-success" role="alert">
       ✅&nbsp;&nbsp;Ton gossip a bien été créé !
     </div>
   <% end %>
+
   <% if notice == "Gossip modified!" %>
     <div class="alert alert-success" role="alert">
       ✅&nbsp;&nbsp;Le gossip a bien été modifié !
     </div>
   <% end %>
+
   <% if notice == "Gossip destroyed!" %>
     <div class="alert alert-success" role="alert">
       ❌&nbsp;&nbsp;Le gossip a bien été supprimé !
     </div>
   <% end %>
+
+  <% if notice == "User saved!" %>
+    <div class="alert alert-success" role="alert">
+      ✅&nbsp;&nbsp;Le compte a bien été créé !
+    </div>
+  <% end %>
+
+  <% if notice == "Logged in!" %>
+    <div class="alert alert-primary" role="alert">
+      🌐&nbsp;&nbsp;Tu es maintenant connecté.
+    </div>
+  <% end %>
+
+  <% if notice == "Logged out!" %>
+    <div class="alert alert-primary" role="alert">
+      ❌&nbsp;&nbsp;Tu es maintenant déconnecté.
+    </div>
+  <% end %>
+
   <br>
   <h3>Voici la liste des gossips déjà existants :</h3><br>
 

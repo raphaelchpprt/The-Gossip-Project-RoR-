@@ -1,0 +1,38 @@
+<div id="one">
+  <div class="container">      
+    <h1>CRÉER UN COMPTE</h1>
+    <hr class="style1"><br />
+
+    <% if @user.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <br>
+        <p>❌&nbsp;&nbsp;Nous n'avons pas réussi à créer le compte pour la (ou les) raison(s) suivante(s) :</p>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <br>
+      </div>
+    <% end %>
+
+    <%= form_tag users_path, method: "POST" do %>
+      <div class="form-group mb-2">
+        <%= label_tag 'Adresse e-mail : ' %>
+        <%= text_field_tag :email, params[:email], class: 'form-control', placeholder: 'E-mail' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= label_tag 'Mot de passe : ' %>
+        <%= text_field_tag :password, params[:password], class: 'form-control', placeholder: 'Mot de passe' %>
+      </div>
+      <div class="form-group">
+        <%= label_tag 'Confirmation de mot de passe : ' %>
+        <%= text_field_tag :confirmation, params[:confirmation], class: 'form-control', placeholder: 'Confirmation de mot de passe' %>
+      </div>
+      <br>
+        <%= submit_tag "Inscription", class: 'btn btn-success' %>
+
+    <% end %>
+  </div>
+</div>
