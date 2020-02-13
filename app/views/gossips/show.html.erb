@@ -2,6 +2,16 @@
   <div class="container">  
     <h1>PAGE POTIN</h1>
     <hr class="style1"><br>
+    <% if notice == "Comment modified!" %>
+      <div class="alert alert-success" role="alert">
+        ✅&nbsp;&nbsp;Ton commentaire a bien été modifié !
+      </div>
+    <% end %>
+    <% if notice == "Comment destroyed!" %>
+      <div class="alert alert-success" role="alert">
+        ❌&nbsp;&nbsp;Ton commentaire a bien été supprimé !
+      </div>
+    <% end %>
     <div class ="card" id="two">
       <h2>Voici la page du gossip n°<%= @gossip.id %>, intitulé : <strong><%= @gossip.title %></strong></h2>
           <p><br>
@@ -20,7 +30,9 @@
       &nbsp;&nbsp;&nbsp;
       <%= link_to "Supprimer le gossip", gossip_path(@gossip.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le gossip ?"}, :class => "btn btn-danger" %>
       <p></p>
+
       <hr class="style1"><br>
+
       <h4>Commentaires :</h4>
       <p>
       <% @comments.each do |comment| %>
@@ -30,9 +42,10 @@
             <p class="card-text"><b></b> <%= comment.content %></p>
             <%= link_to "Modifier le commentaire", edit_gossip_comment_path(@gossip, comment), :class => "btn btn-secondary btn-sm" %>
           </div>
-        </div>
-      <br>
+        </div> 
+      <p></p>
       <% end %>
+
       <p></p>
       <p>
         <%= form_tag gossip_comments_path(@gossip), method: "post" do %>

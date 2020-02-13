@@ -7,7 +7,7 @@
     <% if @comment.errors.any? %>
       <div class="alert alert-danger" role="alert">
         <br>
-        <p>❌&nbsp;&nbsp;Nous n'avons pas réussi à modifier le potin pour la (ou les) raison(s) suivante(s) :</p>
+        <p>❌&nbsp;&nbsp;Nous n'avons pas réussi à modifier le commentaire pour la (ou les) raison(s) suivante(s) :</p>
         <ul>
           <% @gossip.errors.full_messages.each do |message| %>
             <li><%= message %></li>
@@ -17,15 +17,16 @@
       </div>
     <% end %>
 
-    <h2>Modification du commentaire : <%= @comment.content %></h2><br>
+    <h2>Modification du commentaire : </h2>
+    <h4><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>"<%= @comment.content %>"</strong> écrit par <strong><%= @comment.user.first_name %><%= @comment.user.last_name %></strong><h4><br>
     <%= form_tag gossip_comment_path, method: "patch" do %>
       <div class="form-group mb-2">
-        <%= label_tag 'Commentaire : ' %>
+        <%= label_tag 'Nouveau commentaire : ' %>
         <%= text_area_tag :content, params[:content], class: 'form-control', placeholder: 'New comment...' %>
       </div>
       <br>
-        <%= submit_tag "Modifier", class: 'btn btn-primary' %>
-        <%= link_to "Supprimer le commentaire", gossip_comment_path(@gossip.id, @comment.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le commentaire ?"}, :class => "btn btn-danger" %>
+        <%= submit_tag "Modifier", class: 'btn btn-primary' %>&nbsp;&nbsp;
+        <%= link_to "Supprimer le commentaire", gossip_comment_path(@gossip.id, @comment.id), :method => "delete", data: {confirm: "Es-tu sûr de vouloir supprimer le gossip ?"}, :class => "btn btn-danger" %>
     <% end %>
     <p><br></p>
   </div>

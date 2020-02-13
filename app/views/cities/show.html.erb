@@ -15,6 +15,7 @@
   <% @gossips.each do |gossip| %>
     <div class="card w-75">
       <div class="card-body">
+        <small class="text-muted">Gossip n°<%= gossip.id %></small><p></p>
         <h5 class="card-title"><b>Auteur :</b> <%= gossip.user.first_name %></h5>
         <p class="card-text"><b>Titre :</b> <%= gossip.title %></p>
         <hr class="style1">
