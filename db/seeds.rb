@@ -35,11 +35,12 @@ b=1
     description: Faker::Lorem.paragraph(sentence_count: 3),
     email: Faker::Internet.email,
     age: Faker::Number.number(digits: 2),
-    city_id: rand(City.first.id..City.last.id)
+    city_id: rand(City.first.id..City.last.id),
+    password: "mdpmdp"
   )
   b+=1
 end
-
+=begin
 User.create(
   id: b,
   first_name: "Anonymous",
@@ -47,8 +48,9 @@ User.create(
   description: "Anonymous anonymous anonymous anonymous anonymous anonymous",
   email: "anonymous@anonymous.com",
   age: "anonymous",
-  city_id: rand(City.first.id..City.last.id)
+  city_id: rand(City.first.id..City.last.id),
 )
+=end
 
 c=1
 20.times do
